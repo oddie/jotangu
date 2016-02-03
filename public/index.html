@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jotangu App</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/assets/css/loading-bar.min.css' type='text/css' media='all' />
+
+    <style>
+
+        * {
+            transition: ease 0.2s;}
+
+        body {
+            font-family: 'OpenSans', sans-serif;
+            background: #337ab7;
+        }
+
+        a:hover {
+            color: #c9302c;
+        }
+
+        .social-list .fa {
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body id="app-layout" ng-app="jotanguApp">
+
+<nav class="navbar navbar-default" ng-controller="NavCtrl as nav" ng-include="'/app/components/navbar/header.html'"></nav>
+<div ui-view></div>
+
+<!-- JavaScripts -->
+<script src="/app/lib/angular.min.js"></script>
+<script src="/app/lib/angular-ui-router.min.js"></script>
+<script src="/app/lib/satellizer.min.js"></script>
+<script src="/app/lib/loading-bar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/app/app.min.js"></script>
+</body>
+</html>

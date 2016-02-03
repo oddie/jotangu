@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4>JotAngu: Laravel + AngularJS + JWT application example</h4>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Backend: Laravel 5.2</li>
+                        <li>Frontend: AngularJS</li>
+                        <li>Implemented login and registration with email/password and social services. (Facebook, Google+, VKontakte)</li>
+                    </ul>
+                    <hr/>
+                    <p>You need configure your web server for splitting requests to frontend and backend. For nginx configuration is like this:</p>
+                    <p>location /api {
+                            try_files $uri $uri/ /index.php?$query_string;
+                            }
+                    </p>
+                    <p>location / {
+                            try_files $uri $uri/ /index.html;
+                            }
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

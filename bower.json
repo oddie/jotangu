@@ -1,0 +1,32 @@
+{
+  "name": "jotangu",
+  "description": "Laravel + AnhularJS + JWT user authentication example",
+  "main": "",
+  "authors": [
+    "Oleg Kovalev"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "angularjs",
+    "jwt",
+    "authenticate",
+    "users"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-ui-router": "~0.2.17",
+    "satellizer": "~0.13.4",
+    "angular-loading-bar": "~0.8.0"
+  }
+}

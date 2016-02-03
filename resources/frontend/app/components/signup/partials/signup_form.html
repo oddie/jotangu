@@ -1,0 +1,65 @@
+<form class="form-horizontal" method="POST">
+    <div class="form-group">
+        <label class="col-md-4 control-label">First name</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="firstname" value="" ng-model="signup.first_name"/>
+
+            <span class="help-block" ng-if="signup.error.first_name">
+                <strong>{{signup.error.first_name}}</strong>
+            </span>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Last name</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="lastname" value="" ng-model="signup.last_name"/>
+
+            <span class="help-block" ng-if="signup.error.last_name">
+                <strong>{{signup.error.last_name}}</strong>
+            </span>
+
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail Address</label>
+
+        <div class="col-md-6">
+            <input type="email" class="form-control" name="email" value="" ng-model="signup.email"/>
+
+            <span class="help-block" ng-if="signup.error.email">
+                <strong>{{signup.error.email}}</strong>
+            </span>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label">Password</label>
+
+        <div class="col-md-6">
+            <input type="password" class="form-control" name="password" ng-model="signup.password"/>
+
+            <span class="help-block" ng-if="signup.error.password">
+                <strong>{{signup.error.password}}</strong>
+            </span>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-6 col-md-offset-4">
+            <button type="submit" class="btn btn-primary" ng-click="signup.signup()">
+                <i class="fa fa-btn fa-user"></i> Sign up
+            </button>
+        </div>
+    </div>
+</form>
+<h4 class="text-center">Or sign in with your social network account</h4>
+<ul class="list-inline text-center social-list">
+    <li><a href="" ng-click="signup.socialLogin('facebook')"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="" ng-click="signup.socialLogin('google')"><i class="fa fa-google-plus"></i></a></li>
+    <li><a href="" ng-click="signup.socialLogin('vkontakte')"><i class="fa fa-vk"></i></a></li>
+</ul>

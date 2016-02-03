@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="navbar-header">
+        <!-- Branding Image -->
+        <a class="navbar-brand" href="/">
+            JotAngu
+        </a>
+    </div>
+    <div class="navbar-collapse" id="app-navbar-collapse">
+        <!-- Left Side Of Navbar -->
+        <ul class="nav navbar-nav">
+            <li ng-class="{'active' : (curPath=='home')}">
+                <a href="/" >Home</a>
+            </li>
+            <li ng-class="{'active' : (curPath=='profile')}" ng-if="nav.isAuthenticated()">
+                <a ui-sref="profile">Profile</a>
+            </li>
+        </ul>
+        <!-- Right Side Of Navbar -->
+        <ul class="nav navbar-nav navbar-right">
+            <!-- Authentication Links -->
+            <li ng-if="nav.isAuthenticated() && nav.user.avatar">
+                <img class="img-circle" width="40" style="padding-top: 5px;" ng-src="{{nav.user.avatar}}"/>
+            </li>
+            <li ng-if="nav.isAuthenticated()">
+                <a>{{nav.user.first_name}} {{nav.user.last_name}}</a>
+            </li>
+            <li ng-if="!nav.isAuthenticated()">
+                <a ui-sref="signin">Login</a>
+            </li>
+            <li ng-if="!nav.isAuthenticated()">
+                <a ui-sref="signup">Register</a>
+            </li>
+            <li ng-if="nav.isAuthenticated()">
+                <a href="" ng-click="nav.logout();">Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>
+

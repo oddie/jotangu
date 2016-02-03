@@ -1,0 +1,34 @@
+<form class="form-horizontal" method="POST">
+    <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail Address</label>
+        <div class="col-md-6">
+            <input type="email" class="form-control" name="email" value="" ng-model="signin.email">
+            <span class="help-block text-danger" ng-if="signin.error.email">
+                {{signin.error.email}}
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Password</label>
+        <div class="col-md-6">
+            <input type="password" class="form-control" name="password" ng-model="signin.password">
+            <span class="help-block text-danger" ng-if="signin.error.password">
+                {{signin.error.password}}
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6 col-md-offset-4">
+            <button type="submit" ng-click="signin.login()" class="btn btn-primary">
+                <i class="fa fa-btn fa-sign-in"></i> Login
+            </button>
+        </div>
+    </div>
+</form>
+<hr/>
+<h4 class="text-center">Or sign in with your social network account</h4>
+<ul class="list-inline text-center social-list">
+    <li><a href="" ng-click="signin.socialLogin('facebook')"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="" ng-click="signin.socialLogin('google')"><i class="fa fa-google-plus"></i></a></li>
+    <li><a href="" ng-click="signin.socialLogin('vkontakte')"><i class="fa fa-vk"></i></a></li>
+</ul>
